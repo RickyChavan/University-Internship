@@ -1,0 +1,402 @@
+[
+  {
+    "eid": "2-s2.0-105021879769",
+    "affiliation": "Huazhong University of Science and Technology, Wuhan, Hubei, China",
+    "phi3_raw_response": " {\"institution\": \"Huazhong University of Science and Technology\"}",
+    "phi3_parsed_json": {
+      "institution": "Huazhong University of Science and Technology"
+    }
+  },
+  {
+    "eid": "2-s2.0-105021879769",
+    "affiliation": "Digital Economy Research Center, Wenhua College, Wuhan, Hubei, China",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105022242887",
+    "affiliation": "Atal Bihari Vajpayee School of Management and Entrepreneurship, New Delhi, DL, India",
+    "phi3_raw_response": " {\"institution\": \"Atal Bihari Vajpayee School of Management and Entrepreneurship\"}",
+    "phi3_parsed_json": {
+      "institution": "Atal Bihari Vajpayee School of Management and Entrepreneurship"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020958825",
+    "affiliation": "School of Economics and Management, Inner Mongolia University China, Hohhot, Nei Mongol, China",
+    "phi3_raw_response": " {\"institution\": \"Inner Mongolia University\"}",
+    "phi3_parsed_json": {
+      "institution": "Inner Mongolia University"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020958825",
+    "affiliation": "School of Computer Science & School of Artificial Intelligence, Inner Mongolia University China, Hohhot, Nei Mongol, China",
+    "phi3_raw_response": " {\"institution\": \"Inner Mongolia University\"}",
+    "phi3_parsed_json": {
+      "institution": "Inner Mongolia University"
+    }
+  },
+  {
+    "eid": "2-s2.0-105016691319",
+    "affiliation": "Politeknik Negeri Ujung Pandang, Makassar, Indonesia",
+    "phi3_raw_response": " {\"institution\": \"Politeknik Negeri Ujung Pandang\"}",
+    "phi3_parsed_json": {
+      "institution": "Politeknik Negeri Ujung Pandang"
+    }
+  },
+  {
+    "eid": "2-s2.0-105022068344",
+    "affiliation": "Center for National Development and Knowledge (CNDK), Jakarta, Indonesia",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020902167",
+    "affiliation": "Department of Psychology, Norges Teknisk-Naturvitenskapelige Universitet, Trondheim, Trondelag, Norway",
+    "phi3_raw_response": " {\"institution\": \"Norges Teknisk-Naturvitenskapelige Universitet\"}",
+    "phi3_parsed_json": {
+      "institution": "Norges Teknisk-Naturvitenskapelige Universitet"
+    }
+  },
+  {
+    "eid": "2-s2.0-105022191808",
+    "affiliation": "CMR Institute of Technology, Bengaluru, KA, India",
+    "phi3_raw_response": " {\"institution\": \"CMR Institute of Technology\"}",
+    "phi3_parsed_json": {
+      "institution": "CMR Institute of Technology"
+    }
+  },
+  {
+    "eid": "2-s2.0-105022186311",
+    "affiliation": "Vivekanand Education Society's Institute of Technology, Mumbai, MH, India",
+    "phi3_raw_response": " {\"institution\": \"Vivekanand Education Society's Institute of Technology\"}",
+    "phi3_parsed_json": {
+      "institution": "Vivekanand Education Society's Institute of Technology"
+    }
+  },
+  {
+    "eid": "2-s2.0-105021838011",
+    "affiliation": "Amrita School of Business, Coimbatore, TN, India",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105021838011",
+    "affiliation": "Equinoct Community Sourced Modelling Solutions, Kochi, India",
+    "phi3_raw_response": " {\"institution\": null}",
+    "phi3_parsed_json": {
+      "institution": null
+    }
+  },
+  {
+    "eid": "2-s2.0-105021838011",
+    "affiliation": "Rajagiri Business School, Kochi, KL, India",
+    "phi3_raw_response": " {\"institution\": \"Rajagiri Business School\"}",
+    "phi3_parsed_json": {
+      "institution": "Rajagiri Business School"
+    }
+  },
+  {
+    "eid": "2-s2.0-105021830910",
+    "affiliation": "Amrita School of Business, Coimbatore, TN, India",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105021801845",
+    "affiliation": "Kristu Jayanti College, Bengaluru, KA, India",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Department of Radiation Oncology, Universitätsklinikum Bonn, Bonn, Nordrhein-Westfalen, Germany",
+    "phi3_raw_response": " {\"institution\": \"Universitätsklinikum Bonn\"}",
+    "phi3_parsed_json": {
+      "institution": "Universitätsklinikum Bonn"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Agencia de Evaluacion de Tecnologias Sanitarias de Uruguay (AETSU), Montevideo, Uruguay",
+    "phi3_raw_response": " {\"institution\": null}",
+    "phi3_parsed_json": {
+      "institution": null
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Department of Radiation Oncology, Hospital de Clinicas Dr. Manuel Quintela, Montevideo, Uruguay",
+    "phi3_raw_response": " {\"institution\": \"N/A\"}",
+    "phi3_parsed_json": {
+      "institution": "N/A"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Department of Cancer Control, Instituto Nacional de Enfermedades Neoplasicas, Lima, Lima, Peru",
+    "phi3_raw_response": " {\"institution\": \"Instituto Nacional de Enfermedades Neoplasicas\"}",
+    "phi3_parsed_json": {
+      "institution": "Instituto Nacional de Enfermedades Neoplasicas"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Department of Radiotherapy, Hospital Angeles de las Lomas, Lomas de Santa Fe, DF, Mexico",
+    "phi3_raw_response": " {\"institution\": null}",
+    "phi3_parsed_json": {
+      "institution": null
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Rayos Contra Cancer, Seattle, WA, United States",
+    "phi3_raw_response": " {\"institution\": null}",
+    "phi3_parsed_json": {
+      "institution": null
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Radiotherapy Unit, Centro de Radioterapia Deán Funes, Cordoba, Argentina",
+    "phi3_raw_response": " {\"institution\": \"Centro de Radioterapia Deán Funes\"}",
+    "phi3_parsed_json": {
+      "institution": "Centro de Radioterapia Deán Funes"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Department of Radiation Oncology, Oncosalud, AUNA, Lima, Lima, Peru",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020814140",
+    "affiliation": "Department of Radiotherapy, Instituto Nacional de Enfermedades Neoplasicas, Lima, Lima, Peru",
+    "phi3_raw_response": " {\"institution\": \"Instituto Nacional de Enfermedades Neoplasicas\"}",
+    "phi3_parsed_json": {
+      "institution": "Instituto Nacional de Enfermedades Neoplasicas"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020669173",
+    "affiliation": "Department of Economics, Tata Institute of Social Sciences, Mumbai, MH, India",
+    "phi3_raw_response": " {\"institution\": \"Tata Institute of Social Sciences\"}",
+    "phi3_parsed_json": {
+      "institution": "Tata Institute of Social Sciences"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020665097",
+    "affiliation": "Department of Computer Science and Technology, Rochester Institute of Technology Kosovo, Pristina, Serbia",
+    "phi3_raw_response": " {\"institution\": \"Rochester Institute of Technology Kosovo\"}",
+    "phi3_parsed_json": {
+      "institution": "Rochester Institute of Technology Kosovo"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020574086",
+    "affiliation": "State University of the Middle-West Region of Paraná (UNICENTRO), Guarapuava, Brazil",
+    "phi3_raw_response": " {\"institution\": \"UNICENTRO\"}",
+    "phi3_parsed_json": {
+      "institution": "UNICENTRO"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020443811",
+    "affiliation": "Vocational Education, OTH Amberg-Weiden, Amberg and Weiden, Germany",
+    "phi3_raw_response": " {\"institution\": \"OTH Amberg-Weiden\"}",
+    "phi3_parsed_json": {
+      "institution": "OTH Amberg-Weiden"
+    }
+  },
+  {
+    "eid": "2-s2.0-105020260922",
+    "affiliation": "Université Sidi Mohamed Ben Abdellah, Fez, Fes-Meknes, Morocco",
+    "phi3_raw_response": " {\"institution\": \"Université Sidi Mohamed Ben Abdellah\"}",
+    "phi3_parsed_json": {
+      "institution": "Université Sidi Mohamed Ben Abdellah"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018236183",
+    "affiliation": "Vietnamese-German University, Thu Dau Mot, Binh Duong, Viet Nam",
+    "phi3_raw_response": " {\"institution\": \"Vietnamese-German University\"}",
+    "phi3_parsed_json": {
+      "institution": "Vietnamese-German University"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018236183",
+    "affiliation": "University of Penza, Penza, Russian Federation",
+    "phi3_raw_response": " {\"institution\": \"University of Penza\"}",
+    "phi3_parsed_json": {
+      "institution": "University of Penza"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018236183",
+    "affiliation": "Administrative Headquarters of the Max Planck Society, Munich, Bayern, Germany",
+    "phi3_raw_response": " {\"institution\": \"Max Planck Society\"}",
+    "phi3_parsed_json": {
+      "institution": "Max Planck Society"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018219637",
+    "affiliation": "Vocational Education, OTH Amberg-Weiden, Amberg and Weiden, Germany",
+    "phi3_raw_response": " {\"institution\": \"OTH Amberg-Weiden\"}",
+    "phi3_parsed_json": {
+      "institution": "OTH Amberg-Weiden"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018212950",
+    "affiliation": "Department for Research on Educational Sciences, Universität Zürich, Zurich, ZH, Switzerland",
+    "phi3_raw_response": " {\"institution\": \"Universität Zürich\"}",
+    "phi3_parsed_json": {
+      "institution": "Universität Zürich"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018212950",
+    "affiliation": "Fachhochschule Wiesbaden, Wiesbaden, Hessen, Germany",
+    "phi3_raw_response": " {\"institution\": \"Fachhochschule Wiesbaden\"}",
+    "phi3_parsed_json": {
+      "institution": "Fachhochschule Wiesbaden"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018200365",
+    "affiliation": "University of Technology and Applied Sciences Shinas, Shinas, Al Batinah, Oman",
+    "phi3_raw_response": " {\"institution\": \"University of Technology and Applied Sciences Shinas\"}",
+    "phi3_parsed_json": {
+      "institution": "University of Technology and Applied Sciences Shinas"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018193070",
+    "affiliation": "Vocational Education, OTH Amberg-Weiden, Amberg and Weiden, Germany",
+    "phi3_raw_response": " {\"institution\": \"OTH Amberg-Weiden\"}",
+    "phi3_parsed_json": {
+      "institution": "OTH Amberg-Weiden"
+    }
+  },
+  {
+    "eid": "2-s2.0-105018186594",
+    "affiliation": "International Studies, Istituto Nazionale per la Valutazione del Sistema Educativo di Istruzione e di Formazione, Rome, Italy",
+    "phi3_raw_response": " {\"institution\": \"Istituto Nazionale per la Valutazione del Sistema Educativo di Istruzione e di Formazione\"}",
+    "phi3_parsed_json": {
+      "institution": "Istituto Nazionale per la Valutazione del Sistema Educativo di Istruzione e di Formazione"
+    }
+  },
+  {
+    "eid": "2-s2.0-105017368762",
+    "affiliation": "School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, China",
+    "phi3_raw_response": " {\"institution\": \"University of Chinese Academy of Sciences\"}",
+    "phi3_parsed_json": {
+      "institution": "University of Chinese Academy of Sciences"
+    }
+  },
+  {
+    "eid": "2-s2.0-105015349416",
+    "affiliation": "Regent College London, London, United States",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105015349416",
+    "affiliation": "Utafiti Kamili Research Centre Uganda, Kampala, Uganda",
+    "phi3_raw_response": " {\"institution\": \"Null\"}",
+    "phi3_parsed_json": {
+      "institution": "Null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105014452182",
+    "affiliation": "Leibniz-Institut für Finanzmarktforschung SAFE, Frankfurt am Main, Hessen, Germany",
+    "phi3_raw_response": " {\"institution\": null}",
+    "phi3_parsed_json": {
+      "institution": null
+    }
+  },
+  {
+    "eid": "2-s2.0-105014452182",
+    "affiliation": "TrustBridge Rule of Law Foundation, New Delhi, India",
+    "phi3_raw_response": " {\"institution\": null}",
+    "phi3_parsed_json": {
+      "institution": null
+    }
+  },
+  {
+    "eid": "2-s2.0-105012730894",
+    "affiliation": "School of Economics, Fuyang Normal University, Fuyang, Anhui, China",
+    "phi3_raw_response": " {\"institution\": \"Fuyang Normal University\"}",
+    "phi3_parsed_json": {
+      "institution": "Fuyang Normal University"
+    }
+  },
+  {
+    "eid": "2-s2.0-105011341741",
+    "affiliation": "VNUHCM - University of Information Technology, Ho Chi Minh City, Viet Nam",
+    "phi3_raw_response": " {\"institution\": \"VNUHCM\"}",
+    "phi3_parsed_json": {
+      "institution": "VNUHCM"
+    }
+  },
+  {
+    "eid": "2-s2.0-105011341741",
+    "affiliation": "Viet Nam National University Ho Chi Minh City, Ho Chi Minh City, Viet Nam",
+    "phi3_raw_response": " {\"institution\": \"Viet Nam National University Ho Chi Minh City\"}",
+    "phi3_parsed_json": {
+      "institution": "Viet Nam National University Ho Chi Minh City"
+    }
+  },
+  {
+    "eid": "2-s2.0-105011341741",
+    "affiliation": "Department of Computer Science, Las Cruces, NM, United States",
+    "phi3_raw_response": " {\"institution\": \"null\"}",
+    "phi3_parsed_json": {
+      "institution": "null"
+    }
+  },
+  {
+    "eid": "2-s2.0-105011341741",
+    "affiliation": "University of Economics and Law, Ho Chi Minh City, Viet Nam",
+    "phi3_raw_response": " {\"institution\": \"University of Economics and Law\"}",
+    "phi3_parsed_json": {
+      "institution": "University of Economics and Law"
+    }
+  },
+  {
+    "eid": "2-s2.0-85212209239",
+    "affiliation": "Department of Commerce, Bharathiyar Arts & Science College for Women, Attur, TN, India",
+    "phi3_raw_response": " {\"institution\": \"Bharathiyar Arts & Science College for Women\"}",
+    "phi3_parsed_json": {
+      "institution": "Bharathiyar Arts & Science College for Women"
+    }
+  },
+  {
+    "eid": "2-s2.0-85212209239",
+    "affiliation": "Bharathiyar Arts & Science College for Women, Attur, TN, India",
+    "phi3_raw_response": " {\"institution\": \"Bharathiyar Arts & Science College for Women\"}",
+    "phi3_parsed_json": {
+      "institution": "Bharathiyar Arts & Science College for Women"
+    }
+  }
+]
