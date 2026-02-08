@@ -59,7 +59,7 @@ You are a data-cleaning function.
 TASK:
 Identify the most likely UNIVERSITY from the affiliation.
 
-RULES:
+RULES:  
 - Respond ONLY in valid JSON
 - NO explanations
 - NO extra text
