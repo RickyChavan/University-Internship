@@ -8,8 +8,8 @@ df = pd.read_excel(input_file, skiprows=1)
 df.columns = [col.replace('"', '') for col in df.columns]
 
 # 2. Select and keep the required columns
-required_cols = ["EID", "Authors", "Affiliations", "Title", "Year"]
-df = df[required_cols].dropna(subset=["Authors", "Affiliations"]).copy()
+required_cols = ["EID", "Authors", "Authors with affiliations", "Title", "Year"]
+df = df[required_cols].dropna(subset=["Authors", "Authors with affiliations"]).copy()
 
 # 3. Process each row to pair authors and affiliations
 expanded_data = []
@@ -17,7 +17,7 @@ expanded_data = []
 for _, row in df.iterrows():
     # Split by semicolon and strip whitespace/quotes
     authors = [a.strip().strip('"') for a in str(row["Authors"]).split(";")]
-    affiliations = [aff.strip().strip('"') for aff in str(row["Affiliations"]).split(";")]
+    affiliations = [aff.strip().strip('"') for aff in str(row["Authors with affiliations"]).split(";")]
     
     # Pair 1st author with 1st affiliation, 2nd with 2nd, etc.
     # zip stops at the end of the shorter list

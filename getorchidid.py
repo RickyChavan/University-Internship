@@ -1,63 +1,72 @@
 import pandas as pd
 import requests
-import time
 import re
+import time
 from rapidfuzz import fuzz
 
 # =========================
 # CONFIG
 # =========================
-API_KEY = "0gNGJzrC3W8SseitbXSQ5n"
-INPUT_CSV = "output_with_qs_match.csv"
-OUTPUT_CSV = "authors_with_orcid.csv"
-MAILTO = "your_email@example.com"
+INPUT_EXCEL = "scopus_finlit.xlsx"
+OUTPUT_EXCEL = "authors_with_orcid_first100.xlsx"
+AUTHOR_COLUMN = "Author_full_names"
 
-OPENALEX_WORKS = "https://api.openalex.org/works"
-DELAY = 0.4
+MAILTO = "hrishichavan193@gmail.com"
+OPENALEX_AUTHORS = "https://api.openalex.org/authors"
 
-TITLE_THRESHOLD = 85
-NAME_THRESHOLD = 80
-AFFIL_THRESHOLD = 80
-
-# =========================
-# SESSION
-# =========================
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
-
-session = requests.Session()
-session.headers.update({
-    "Authorization": f"Bearer {API_KEY}",
-    "Accept": "application/json"
-})
-
-retries = Retry(
-    total=5,
-    backoff_factor=1.5,
-    status_forcelist=[429, 500, 502, 503, 504],
-    allowed_methods=["GET"]
-)
-
-adapter = HTTPAdapter(max_retries=retries)
-session.mount("https://", adapter)
+DELAY = 0.3
+NAME_MATCH_THRESHOLD = 85
+MAX_ROWS = 100   # <<< IMPORTANT
 
 # =========================
 # HELPERS
 # =========================
-def norm(text):
+
+df = pd.read_excel(INPUT_EXCEL, header=None)
+
+# Promote first row to header
+df.columns = df.iloc[0]
+
+# Drop the header row from data
+df = df.drop(index=0).reset_index(drop=True)
+
+# Clean column names (remove quotes & spaces)
+df.columns = (
+    df.columns
+      .astype(str)
+      .str.replace('"', '', regex=False)
+      .str.strip()
+)
+
+print("Detected columns:", df.columns.tolist())
+
+def clean_author_string(text):
     if not isinstance(text, str):
-        return ""
+        return []
+    text = re.sub(r"\(.*?\)", "", text)  # remove brackets
+    authors = [a.strip() for a in text.split(";") if a.strip()]
+    return authors
+
+def normalize(text):
     text = text.lower()
-    text = re.sub(r"[^a-z ]", "", text)
+    text = re.sub(r"[^a-z ,]", "", text)
     return text.strip()
 
-def search_works(title):
-    r = session.get(
-        OPENALEX_WORKS,
+def to_surname_comma_name(name):
+    if "," in name:
+        return name.strip()
+    parts = name.split()
+    if len(parts) >= 2:
+        return f"{parts[-1]}, {' '.join(parts[:-1])}"
+    return name
+
+def search_openalex_author(name):
+    r = requests.get(
+        OPENALEX_AUTHORS,
         params={
-            "search": title,
-            "per-page": 5
+            "search": name,
+            "per-page": 3,
+            "mailto": MAILTO
         },
         timeout=30
     )
@@ -68,56 +77,49 @@ def search_works(title):
 # =========================
 # MAIN
 # =========================
-df = pd.read_csv(INPUT_CSV)
-results = []
+df = pd.read_excel(INPUT_EXCEL).head(MAX_ROWS)
 
-for i, row in df.iterrows():
-    title = row["Title"]
-    affil = norm(row["Affiliations"])
-    country = row["country"].upper()
-    author_csv = norm(row["Authors"])
+rows = []
 
-    print(f"[{i+1}/{len(df)}] {title[:70]}")
+for idx, row in df.iterrows():
+    raw_authors = row[AUTHOR_COLUMN]
+    authors = clean_author_string(raw_authors)
 
-    works = search_works(title)
-    time.sleep(DELAY)
+    print(f"[Row {idx+1}] Processing {len(authors)} authors")
 
-    for work in works:
-        title_score = fuzz.token_sort_ratio(norm(title), norm(work.get("title", "")))
-        if title_score < TITLE_THRESHOLD:
-            continue
+    for author in authors:
+        formatted = to_surname_comma_name(author)
+        norm_author = normalize(formatted)
 
-        for auth in work.get("authorships", []):
-            author = auth.get("author", {})
-            author_name = norm(author.get("display_name", ""))
+        matches = search_openalex_author(formatted)
+        time.sleep(DELAY)
 
-            name_score = fuzz.token_sort_ratio(author_csv, author_name)
-            if name_score < NAME_THRESHOLD:
-                continue
+        best_orcid = None
+        best_match_name = None
+        best_score = 0
 
-            for inst in auth.get("institutions", []):
-                inst_name = norm(inst.get("display_name", ""))
-                inst_country = inst.get("country_code")
+        for m in matches:
+            oa_name = m.get("display_name", "")
+            score = fuzz.token_sort_ratio(norm_author, normalize(oa_name))
 
-                affil_score = fuzz.token_sort_ratio(affil, inst_name)
+            if score > best_score and score >= NAME_MATCH_THRESHOLD:
+                best_score = score
+                best_match_name = oa_name
+                best_orcid = m.get("orcid")
 
-                if affil_score >= AFFIL_THRESHOLD and inst_country == country:
-                    results.append({
-                        "csv_title": title,
-                        "csv_author": row["author"],
-                        "matched_author": author.get("display_name"),
-                        "institution": inst.get("display_name"),
-                        "country": inst_country,
-                        "orcid_url": author.get("orcid"),
-                        "title_score": title_score,
-                        "name_score": name_score,
-                        "affil_score": affil_score
-                    })
+        rows.append({
+            "row_number": idx + 1,
+            "original_author_string": author,
+            "clean_author_name": formatted,
+            "matched_openalex_name": best_match_name,
+            "orcid_url": best_orcid,
+            "match_score": best_score
+        })
 
 # =========================
 # SAVE
 # =========================
-out = pd.DataFrame(results)
-out.to_csv(OUTPUT_CSV, index=False)
+out = pd.DataFrame(rows)
+out.to_excel(OUTPUT_EXCEL, index=False)
 
-print(f"\nSaved {len(out)} ORCID matches → {OUTPUT_CSV}")
+print(f"\n✅ Saved first 100-row results to {OUTPUT_EXCEL}")

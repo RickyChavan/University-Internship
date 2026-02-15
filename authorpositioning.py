@@ -1,7 +1,7 @@
 import pandas as pd
 
-input_file = "scopus_finlit_qs2024_repec.csv"
-output_file = "scopus_finlit_qs2024_repec_author_position.csv"
+input_file = "scopus_finlit_with_country.csv"
+output_file = "scopus_finlit_wc_authorposition.csv"
 
 # Read CSV without dropping NA
 df = pd.read_csv(input_file, keep_default_na=True)
